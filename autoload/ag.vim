@@ -73,7 +73,7 @@ function! ag#AgBuffer(cmd, args)
 endfunction
 
 function! ag#Ag(cmd, args)
-  let l:ag_executable = get(split(g:ag_prg, " "), 0)
+  let l:ag_executable = expand(get(split(g:ag_prg, " "), 0))
 
   " Ensure that `ag` is installed
   if !executable(l:ag_executable)
